@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace Noteapp_01
 {
@@ -23,6 +24,15 @@ namespace Noteapp_01
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void miBetuTipus_Click(object sender, RoutedEventArgs e)
+        {
+            FontDialog dlg = new FontDialog();
+            if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            { 
+                
+            }
         }
     }
 }

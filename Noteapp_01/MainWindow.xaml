@@ -6,22 +6,32 @@
         xmlns:local="clr-namespace:Noteapp_01"
         mc:Ignorable="d"
         Title="Notepad" Height="450" Width="800">
+    
     <Grid>
-        <StackPanel x:Name="spMenu">
-            <Menu x:Name="mnFőmenü">
-                <MenuItem Header="Fájl" Name="miFájl">
-                    <MenuItem x:Name="miUj" Header="Új" />
-                    <Separator/>
-                    <MenuItem x:Name="miMent" Header="Mentés" />
-                    <Separator/>
-                    <MenuItem x:Name="miTalloz" Header="Tallózás..." />                   
-                </MenuItem>
-                <MenuItem Header="Opciók" Name="miOpciok">
-                    <MenuItem x:Name="miBetuTipus" Header="Betű Típus" />
-                    <Separator/>
-                    <MenuItem x:Name="miBetüSzin" Header="Betű Szín" />
-                </MenuItem>
-            </Menu>                  
-        </StackPanel>
+       
+        <Grid>
+            <StackPanel x:Name="spMenu">
+                <Menu x:Name="mnFőmenü">
+                    <MenuItem Header="Fájl" Name="miFájl">
+                        <MenuItem x:Name="miUj" Header="Új" />
+                        <Separator/>
+                        <MenuItem x:Name="miMent" Header="Mentés" />
+                        <Separator/>
+                        <MenuItem x:Name="miTalloz" Header="Tallózás..." />
+                    </MenuItem>
+                    <MenuItem Header="Opciók" Name="miOpciok">
+                        <MenuItem x:Name="miBetuTipus" Header="Betű Típus" Click="miBetuTipus_Click" />
+                        <Separator/>
+                        <MenuItem x:Name="miBetüSzin" Header="Betű Szín" />
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="0,20,0,0">
+            <TextBox x:Name="tbJegyzet"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Visible"/>
+        </Grid>
     </Grid>
 </Window>
